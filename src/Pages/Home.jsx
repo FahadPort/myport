@@ -101,14 +101,27 @@ const Home = () => {
                       <div className="inner-col mid">
                         <div className="img">
                           <img src={girl} alt="" />
-                          <div className="buttons">
+                          {/* <div className="buttons">
                             <button className="cta-orange">
                               <Link to={""}>Portfolio</Link>
                             </button>
                             <button className="cta-hire">
                               <Link to={""}>Hire me</Link>
                             </button>
-                          </div>
+                          </div> */}
+                            <div class="switches-container">
+    <input type="radio" id="switchMonthly" name="switchPlan" value="Monthly" checked="checked" />
+    <input type="radio" id="switchYearly" name="switchPlan" value="Yearly" />
+    <label for="switchMonthly">Monthly</label>
+    <label for="switchYearly">Yearly</label>
+    <div class="switch-wrapper">
+      <div class="switch">
+        <div>Monthly</div>
+        <div>Yearly</div>
+      </div>
+    </div>
+  </div>
+  
                         </div>
                       </div>
                     </Col>
