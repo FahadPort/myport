@@ -1,30 +1,31 @@
 @font-face {
   font-family: "lufga-bold";
-  src: url("../src/Assests/Font/Fontspring-DEMO-lufga-bold.otf") format("truetype");
- }
- @font-face {
+  src: url("../src/Assests/Font/Fontspring-DEMO-lufga-bold.otf")
+    format("truetype");
+}
+@font-face {
   font-family: "lufga-light";
-  src: url("../src/Assests/Font/Fontspring-DEMO-lufga-light.otf") format("truetype");
- }
- @font-face {
+  src: url("../src/Assests/Font/Fontspring-DEMO-lufga-light.otf")
+    format("truetype");
+}
+@font-face {
   font-family: "lufga-medium";
-  src: url("../src/Assests/Font/Fontspring-DEMO-lufga-medium.otf") format("truetype");
- }
- @font-face {
+  src: url("../src/Assests/Font/Fontspring-DEMO-lufga-medium.otf")
+    format("truetype");
+}
+@font-face {
   font-family: "lufga-semibold";
-  src: url("../src/Assests/Font/Fontspring-DEMO-lufga-semibold.otf") format("truetype");
- }
- @font-face {
+  src: url("../src/Assests/Font/Fontspring-DEMO-lufga-semibold.otf")
+    format("truetype");
+}
+@font-face {
   font-family: "Urbanist-SemiBold";
   src: url("../src/Assests/Font/Urbanist-SemiBold.otf") format("truetype");
- }
- @font-face {
+}
+@font-face {
   font-family: "Urbanist-Bold";
   src: url("../src/Assests/Font/Urbanist-Bold.ttf") format("truetype");
- }
- 
-
-
+}
 
 /* Header CSS */
 
@@ -47,9 +48,11 @@ nav.nav-outer {
   transition: all 0.5s;
 }
 
-.header-nav a:hover {
-    background: #FD853A;
-    color: #fff !important;
+.header-nav a:hover,
+.header-nav a:focus,
+.header-nav a:active {
+  background: #fd853a;
+  color: #fff !important;
 }
 
 .nav-outer {
@@ -88,7 +91,9 @@ nav.nav-outer {
   background-repeat: no-repeat;
   background-position: top right;
 }
-
+div#banner h3 {
+  color: #171717 !important;
+}
 .banner-content .ban-head button {
   position: relative;
 }
@@ -115,7 +120,7 @@ h1 {
 }
 
 .orange {
-  color: #FD853A !important;
+  color: #fd853a !important;
 }
 
 .banner-content .left p {
@@ -197,48 +202,133 @@ h3 {
   background-size: cover;
 }
 
-.ban-text .img:before {content: "";background: #FEB273;height: 500px;width: 500px;position: absolute;left: 0;border-radius: 50%;right: 0;margin: auto;bottom: -34%;z-index: -1;transform: scale(1.5);}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  max-width: 370px;
-  margin: 0 auto;
-  padding: 5px 0px;
+.ban-text .img:before {
+  content: "";
+  background: #feb273;
+  height: 500px;
+  width: 500px;
   position: absolute;
   left: 0;
+  border-radius: 50%;
   right: 0;
-  bottom: 6%;
- 
+  margin: auto;
+  bottom: -34%;
+  z-index: -1;
+  transform: scale(1.5);
 }
 
-.buttons button {
-  margin: 0 5px;
+
+:root {
+  --switches-bg-color: #fff;
+  --switches-label-color: white ;
+  --switch-bg-color: #ff8b48;
+  --switch-text-color: #fff ;
 }
 
-button.cta-orange {
- 
-  background: #ff8b48 !important;
+
+
+
+
+/* container for all of the switch elements 
+  - adjust "width" to fit the content accordingly 
+*/
+.switches-container {
+  width: 16rem;
+  display: flex;
+  line-height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  
+/* From https: //css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.buttons button a {
-  text-decoration: none;
-  color: #fff;
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
 }
-.buttons button{
- border: unset !important;
- color: #fff;
- font-size: 20px;
- padding: 15px 30px !important;
- border-radius: 40px;
- transition: all 0.5s;
- background: transparent;
- width: 180px;
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+  width: 60%;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: var(--switches-label-color);
+  font-family: "lufga-light";
+  font-size: 20px;
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+  - need wrapper to enable the even margins around the highlight box
+*/
+.switch-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  padding: 0.15rem;
+  z-index: 3;
+  transition: transform .5s cubic-bezier(.77, 0, .175, 1);
+  /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.switch {
+  border-radius: 3rem;
+  background: var(--switch-bg-color);
+  height: 100%;
+}
+
+/* switch box labels
+  - default setup
+  - toggle afterwards based on radio:checked status 
+*/
+.switch div {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  color: var(--switch-text-color);
+  transition: opacity .2s cubic-bezier(.77, 0, .175, 1) .125s;
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "lufga-light";
+  font-size: 20px;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper {
+  transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper {
+  transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+  opacity: 1;
 }
 
 /* Experience Section CSS  */
@@ -255,9 +345,7 @@ div#experience {
   padding: 100px 0;
 }
 
-
 /* Services Section CSS  */
-
 
 div#services {
   position: relative;
@@ -267,49 +355,54 @@ div#services {
 div#services .heading-sec {
   padding-bottom: 70px;
 }
-div#services:before{
+div#services:before {
   content: "";
   background: url("../src//Assests/image/ser-bg.png");
   height: 100%;
-    width: 100%;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    z-index: -1;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
 }
 #services .serv-content {
   padding: 100px 0;
 }
-h3 , h4 {
+h3,
+h4 {
   color: #fff !important;
   font-family: "lufga-medium" !important;
 }
-#services p  {
+#services p {
   color: #fff !important;
   font-family: "lufga-medium" !important;
 }
 #services .arrow a svg {
-  background: #1D2939;
+  background: #1d2939;
   padding: 20px;
   display: inline-block;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  height: 100px;
+  width: 100px;
   color: #fff;
   font-size: 45px;
   transform: rotate(-45deg);
+  margin-right: -5px;
+  transition: all 0.5s;
 }
-
+#services .arrow a svg:hover {
+  background: #ff9154;
+}
 #services .arrow {
   text-align: right;
   position: absolute;
   bottom: 0;
   right: 0;
 }
-#services  h3 {
+#services h3 {
   font-weight: 100 !important;
 }
 
@@ -323,22 +416,38 @@ h4 {
   padding: 30px 0 0;
   position: relative;
   border-radius: 40px;
-
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  border-left: 1px solid rgba(255, 255, 255, 1);
+  margin-bottom: 40px;
 }
 
-#services  .slick-slide {
+#services .slick-slide {
   padding: 0 10px;
 }
-
+#services .box img {
+  width: 100%;
+}
 #services .box .title {
   padding: 0 30px 20px;
   border-bottom: 1px solid #cecaca;
   margin-bottom: 30px;
 }
 
+div#services .slick-dots li button:before {
+  display: none;
+}
 
+div#services .slick-dots li {
+  background: #fff;
+  height: 20px;
+  border-radius: 20px;
+}
 
+div#services .slick-dots li.slick-active {
+  width: 90px;
+  background: #ff9154;
+}
