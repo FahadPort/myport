@@ -9,14 +9,12 @@ import "aos/dist/aos.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import webdesign1 from "../Assests/image/webdesign1.png"
-import uiux1 from "../Assests/image/uiux1.png"
-import webdesign2 from "../Assests/image/webdesign2.png"
-import uiux2 from "../Assests/image/uiux2.png"
+import webdesign1 from "../Assests/image/webdesign1.png";
+import uiux1 from "../Assests/image/uiux1.png";
+import webdesign2 from "../Assests/image/webdesign2.png";
+import uiux2 from "../Assests/image/uiux2.png";
 import { FaArrowRight } from "react-icons/fa6";
 import { LiaStarSolid } from "react-icons/lia";
-
-
 
 const Home = () => {
   const settings = {
@@ -101,27 +99,30 @@ const Home = () => {
                       <div className="inner-col mid">
                         <div className="img">
                           <img src={girl} alt="" />
-                          {/* <div className="buttons">
-                            <button className="cta-orange">
-                              <Link to={""}>Portfolio</Link>
-                            </button>
-                            <button className="cta-hire">
-                              <Link to={""}>Hire me</Link>
-                            </button>
-                          </div> */}
-                            <div class="switches-container">
-    <input type="radio" id="switchMonthly" name="switchPlan" value="Monthly" checked="checked" />
-    <input type="radio" id="switchYearly" name="switchPlan" value="Yearly" />
-    <label for="switchMonthly">Monthly</label>
-    <label for="switchYearly">Yearly</label>
-    <div class="switch-wrapper">
-      <div class="switch">
-        <div>Monthly</div>
-        <div>Yearly</div>
-      </div>
-    </div>
-  </div>
-  
+
+                          <div class="switches-container">
+                            <input
+                              type="radio"
+                              id="switchMonthly"
+                              name="switchPlan"
+                              value="Monthly"
+                              checked="checked"
+                            />
+                            <input
+                              type="radio"
+                              id="switchYearly"
+                              name="switchPlan"
+                              value="Yearly"
+                            />
+                            <label for="switchMonthly">Portfolio</label>
+                            <label for="switchYearly">Hire Me</label>
+                            <div class="switch-wrapper">
+                              <div class="switch">
+                                <div>Portfolio</div>
+                                <div>Hire Me</div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </Col>
@@ -135,11 +136,21 @@ const Home = () => {
                       >
                         <div className="exp">
                           <ul>
-                            <li><LiaStarSolid /></li>
-                            <li><LiaStarSolid /></li>
-                            <li><LiaStarSolid /></li>
-                            <li><LiaStarSolid /></li>
-                            <li><LiaStarSolid /></li>
+                            <li>
+                              <LiaStarSolid />
+                            </li>
+                            <li>
+                              <LiaStarSolid />
+                            </li>
+                            <li>
+                              <LiaStarSolid />
+                            </li>
+                            <li>
+                              <LiaStarSolid />
+                            </li>
+                            <li>
+                              <LiaStarSolid />
+                            </li>
                           </ul>
                           <h3>10 Years</h3>
                           <p>Experience</p>
@@ -153,89 +164,105 @@ const Home = () => {
           </div>
 
           <div id="services">
-            <div className="container">
-              <div className="serv-content">
-                <div className="heading-sec">
-                  <Row>
-                    <Col md={6}>
-                      <div className="inner-col">
-                        <h3>
-                          My <span className="orange">Services</span>
-                        </h3>
-                      </div>
-                    </Col>
-                    <Col md={6}>
-                      <div className="inner-col">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Duis lacus nunc, posuere in justo vulputate,
-                          bibendum sodales{" "}
-                        </p>
-                      </div>
-                    </Col>
-                  </Row>
-                </div>
-                <div className="boxes">
-                  <Slider {...settings}>
-                    <div>
-                      <div className="box">
-                        <div className="title">
-                          <h4>UI/ UX Design</h4>
+            <div className="row-bg">
+              <div className="container">
+                <div className="serv-content">
+                  <div className="heading-sec">
+                    <Row>
+                      <Col md={6}>
+                        <div className="inner-col">
+                          <h3>
+                            My <span className="orange">Services</span>
+                          </h3>
                         </div>
-                        <div className="image-div">
-                          <div className="image-inner">
-                            <img src={webdesign1} alt="" />
+                      </Col>
+                      <Col md={6}>
+                        <div className="inner-col">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Duis lacus nunc, posuere in justo vulputate,
+                            bibendum sodales{" "}
+                          </p>
+                        </div>
+                      </Col>
+                    </Row>
+                  </div>
+                  <div className="boxes">
+                    <Slider {...settings}>
+                      <div>
+                        <div className="box">
+                          <div className="title">
+                            <h4>UI/ UX Design</h4>
                           </div>
+                          <div className="image-div">
+                            <div className="image-inner">
+                              <img src={webdesign1} alt="" />
+                            </div>
 
-                          <div className="arrow"><Link to={""}><FaArrowRight /></Link></div>
+                            <div className="arrow">
+                              <Link to={""}>
+                                <FaArrowRight />
+                              </Link>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div>
-                      <div className="box">
-                        <div className="title">
-                          <h4>Web Design</h4>
-                        </div>
-                        <div className="image-div">
-                          <div className="image-inner">
-                            <img src={uiux1} alt="" />
+                      <div>
+                        <div className="box">
+                          <div className="title">
+                            <h4>Web Design</h4>
                           </div>
+                          <div className="image-div">
+                            <div className="image-inner">
+                              <img src={uiux1} alt="" />
+                            </div>
 
-                          <div className="arrow">
-                           <Link to={""}><FaArrowRight /></Link>
+                            <div className="arrow">
+                              <Link to={""}>
+                                <FaArrowRight />
+                              </Link>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div>
-                      <div className="box">
-                        <div className="title">
-                          <h4>Landing Page</h4>
-                        </div>
-                        <div className="image-div">
-                          <div className="image-inner">
-                            <img src={webdesign2} alt="" />
+                      <div>
+                        <div className="box">
+                          <div className="title">
+                            <h4>Landing Page</h4>
                           </div>
+                          <div className="image-div">
+                            <div className="image-inner">
+                              <img src={webdesign2} alt="" />
+                            </div>
 
-                          <div className="arrow"><Link to={""}><FaArrowRight /></Link></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="box">
-                        <div className="title">
-                          <h4>UI/ UX Design</h4>
-                        </div>
-                        <div className="image-div">
-                          <div className="image-inner">
-                            <img src={uiux2} alt="" />
+                            <div className="arrow">
+                              <Link to={""}>
+                                <FaArrowRight />
+                              </Link>
+                            </div>
                           </div>
-
-                          <div className="arrow"><Link to={""}><FaArrowRight /></Link></div>
                         </div>
                       </div>
-                    </div>
-                  </Slider>
+                      <div>
+                        <div className="box">
+                          <div className="title">
+                            <h4>UI/ UX Design</h4>
+                          </div>
+                          <div className="image-div">
+                            <div className="image-inner">
+                              <img src={uiux2} alt="" />
+                            </div>
+
+                            <div className="arrow">
+                              <Link to={""}>
+                                <FaArrowRight />
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Slider>
+                  </div>
                 </div>
               </div>
             </div>
@@ -250,6 +277,77 @@ const Home = () => {
                   My <span className="orange">Work Experince</span>
                 </h2>
               </div>
+              <div className="timeline">
+              <div className="exp-timeline">
+                <Row>
+                  <Col md={4}><div className="inner-col"> <div className="companydetails">
+                  <div className="c_name">
+                    <h5>Dapytech</h5>
+                    <p>Dec 2022 - Feb 2023</p>
+                  </div>
+                </div></div></Col>
+                  <Col md={4}><div className="inner-col">  <div className="circle">
+                  <span className="line"></span>
+                </div></div></Col>
+                  <Col md={4}><div className="inner-col"><div className="exp-details">
+                  <div className="position">
+                    <h5>WordPress Web Developer</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, harum.</p>
+                  </div>
+                </div></div></Col>
+                </Row>
+
+               
+
+
+
+              
+
+
+                
+
+   
+              </div>
+              <div className="exp-timeline">
+                <Row>
+                  <Col md={4}><div className="inner-col"> <div className="companydetails">
+                  <div className="c_name">
+                    <h5>FLow Technologies</h5>
+                    <p>March 2023 - Present</p>
+                  </div>
+                </div></div></Col>
+                  <Col md={4}><div className="inner-col">  <div className="circle active">
+                  <span></span>
+                </div></div></Col>
+                  <Col md={4}><div className="inner-col"><div className="exp-details">
+                  <div className="position">
+                    <h5>WordPress Web Developer</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, harum.</p>
+                  </div>
+                </div></div></Col>
+                </Row>
+
+               
+
+
+
+              
+
+
+                
+
+   
+              </div>
+
+              </div>
+
+              
+
+
+
+
+
+             
             </div>
           </div>
         </div>

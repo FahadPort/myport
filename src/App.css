@@ -47,6 +47,9 @@ nav.nav-outer {
   border-radius: 40px;
   transition: all 0.5s;
 }
+.header-nav a.nav-link.active {
+  color: #fff !important;
+}
 
 .header-nav a:hover,
 .header-nav a:focus,
@@ -390,11 +393,12 @@ h4 {
   color: #fff;
   font-size: 45px;
   transform: rotate(-45deg);
-  margin-right: -5px;
+  margin-right: 5px;
   transition: all 0.5s;
+  margin-bottom: 8px;
 }
 #services .arrow a svg:hover {
-  background: #ff9154;
+  background: #fd853a ;
 }
 #services .arrow {
   text-align: right;
@@ -412,17 +416,44 @@ h4 {
   font-weight: 100 !important;
 }
 
+
+#services .box:hover img {
+  transform: scale(1.1);
+}
 #services .box {
   padding: 30px 0 0;
   position: relative;
   border-radius: 40px;
+ 
+  margin-bottom: 40px;
+  transition: all 0.5s;
+  
+}
+.box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border-top: 1px solid rgba(255, 255, 255, 1);
-  border-right: 1px solid rgba(255, 255, 255, 1);
+  border-right: 2px solid rgba(255, 255, 255, 1);
   border-left: 1px solid rgba(255, 255, 255, 1);
-  margin-bottom: 40px;
+  z-index: -1;
+  border-radius: 45px;
+ clip-path: polygon(100% 0, 100% 45%, 17% 100%, 0 100%, 0 0);
+ transition: all 0.5s;
+ border-radius: 40px;
+}
+#services .box  .image-inner {
+  overflow: hidden;
+}
+.box:hover:before{
+  background: #fd853a  !important;
 }
 
 #services .slick-slide {
@@ -430,6 +461,8 @@ h4 {
 }
 #services .box img {
   width: 100%;
+  transition: all 0.5s;
+  border-radius: 40px;
 }
 #services .box .title {
   padding: 0 30px 20px;
@@ -450,4 +483,174 @@ div#services .slick-dots li {
 div#services .slick-dots li.slick-active {
   width: 90px;
   background: #ff9154;
+}
+#services .row-bg:before {
+  content: "";
+  background: url("../src/Assests/image/gifleft.png");
+  height: 50%;
+  width: 40%;
+  position: absolute;
+  left: -4%;
+  top: 0;
+  background-repeat: no-repeat;
+  bottom: 0;
+  background-position-y: center;
+  margin: auto 0;
+  background-size: contain;
+  animation: z-axis-animation 3s ease-in-out 0s infinite alternate;
+
+}
+
+
+
+@keyframes z-axis-animation {
+  from {transform: rotateZ(20deg)}
+  to {transform: rotateZ(-20deg)}
+}
+#services .row-bg:after {
+  content: "";
+  background: url("../src/Assests/image/gifright.png");
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  right: -10%;
+  background-repeat: no-repeat;
+  bottom: -10%;
+  background-size: contain;
+  background-position-x: right;
+  background-position-y: bottom;
+  z-index: -1;
+  animation: moveLR 5s ease-in-out infinite alternate;
+}
+@keyframes moveLR {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(150px); /* Moving right at least 30px */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRL {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-250px); /* Moving left at least 30px */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#services .row-bg, div#services .heading-sec h3{
+  position: relative;
+}
+div#services .heading-sec h3:before{
+  content: "";
+  background: url("../src/Assests/image/gifcenter.png");
+  height: 156px;
+  width: 162px;
+  position: absolute;
+  background-size: cover;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  right: 0;
+  animation: moveAndRotateRight 4s ease-in-out infinite alternate;
+  z-index: -1;
+}
+@keyframes moveAndRotateRight {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(100px) rotate(45deg); /* Move right at least 40px and rotate 45 degrees */
+  }
+  100% {
+    transform: translateX(100px) rotate(45deg); /* Maintain position and rotation */
+  }
+}
+
+@keyframes moveAndRotateLeft {
+  0% {
+    transform: translateX(100px) rotate(45deg); /* Start from the position and rotation reached in the previous animation */
+  }
+  50% {
+    transform: translateX() rotate(0deg); /* Move left at least 40px and reset rotation */
+  }
+  100% {
+    transform: translateX(0) rotate(0deg); /* Maintain position and rotation */
+  }
+}
+
+
+/* Experirnces section CSS  */
+
+
+
+
+
+.exp-timeline h5 {
+  font-size: 40px;
+  line-height: 48px;
+  color: #344054;
+  font-family: "lufga-semibold";
+}
+.exp-timeline p {
+  color: #98A2B3;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "lufga-light";
+}
+
+
+.circle {
+  height: 40px;
+  width: 40px;
+  background: #ff8b48;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.circle:before {
+  height: 50px;
+  width: 50px;
+  content: "";
+  
+  border-color: #2a3e50;
+  border-width: 3px;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto 0px;
+  top: -13%;
+  border-style: dashed;
+}
+.timeline {
+  padding: 70px 0;
+}
+.circle.active {
+  background: #303f52;
+}
+
+
+.circle .line {
+  position: relative;
+}
+
+.circle .line:before {
+  content: "";
+  height: 180px;
+  position: absolute;
+  top: 44px;
+  border-style: dashed;
+  border-color: #2a3e50;
+  border-width: 2px;
+}
+.exp-timeline {
+  padding-bottom: 50px;
 }
