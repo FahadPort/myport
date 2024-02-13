@@ -122,6 +122,34 @@ h1 {
   color: #171717 !important;
 }
 
+
+h2 {
+  text-align: center;
+  color: #344054 !important;
+  font-size: 64px !important;
+  line-height: 72px !important;
+  font-family: "lufga-medium" !important;
+}
+h3 {
+  font-size: 47px !important;
+  line-height: 55px !important;
+  font-family: "Urbanist-Bold" !important;
+  color: #171717 !important;
+  font-weight: 600 !important;
+}
+
+h4 {
+  font-size: 32px !important;
+  line-height: 40px !important;
+  font-weight: 100 !important;
+}
+h5{
+  font-size: 36px !important;
+  line-height: 44px !important;
+  font-family: "lufga-medium" !important;
+  color: #1D2939;
+}
+
 .orange {
   color: #fd853a !important;
 }
@@ -136,13 +164,7 @@ h1 {
   padding-bottom: 20px;
 }
 
-h3 {
-  font-size: 47px !important;
-  line-height: 55px !important;
-  font-family: "Urbanist-Bold" !important;
-  color: #171717 !important;
-  font-weight: 600 !important;
-}
+
 
 .banner-content .right p {
   font-size: 20px;
@@ -336,16 +358,9 @@ h3 {
 
 /* Experience Section CSS  */
 
-h2 {
-  text-align: center;
-  color: #344054 !important;
-  font-size: 64px !important;
-  line-height: 72px !important;
-  font-family: "lufga-medium" !important;
-}
 
 div#experience {
-  padding: 100px 0;
+  padding-top: 100px;
 }
 
 /* Services Section CSS  */
@@ -410,11 +425,6 @@ h4 {
   font-weight: 100 !important;
 }
 
-h4 {
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: 100 !important;
-}
 
 
 #services .box:hover img {
@@ -653,4 +663,430 @@ div#services .heading-sec h3:before{
 }
 .exp-timeline {
   padding-bottom: 50px;
+}
+
+
+/* hire Me Section CSS  */
+
+div#hireme .row-bg {
+  background: #F2F4F7;
+  padding: 100px 0;
+}
+
+
+
+div#hireme h2 {
+  text-align: left;
+}
+
+div#hireme p {
+  color: #98A2B3;
+  max-width: 390px;
+  font-weight: 100 !important;
+  font-family: 'lufga-light';
+  padding: 30px 0px;
+}
+div#hireme .projects p {
+  color: #667085 !important;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 0 !important;
+}
+.projects {
+  padding-bottom: 40px;
+}
+.cta-hire a {
+  text-decoration: none;
+  color: #151515;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.cta-hire {
+border: 1px solid #151515;
+padding: 20px 40px;
+border-radius: 15px;
+background: transparent !important;
+font-family: 'lufga-medium';
+transition: all 0.5s;
+}
+
+.cta-hire:hover {
+  background: #151515 !important;
+}
+
+.cta-hire:hover a {
+  color: #fff;
+}
+
+div#hireme .row {
+  display: flex;
+  align-items: center;
+}
+div#hireme .image-div {
+  position: relative;
+  z-index: 1;
+}
+
+div#hireme .image-div img.rings {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  right: 0;
+  margin: 0 auto;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+div#hireme .image-div img.girlimg {
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+
+div#hireme .image-div:hover img.rings {
+  transform: scale(2);
+}
+
+/* Portfolio CSS  */
+div#portfolio .row-bg {
+  padding: 100px 0;
+}
+div#portfolio h3 {
+  color: #303f52 !important;
+}
+
+
+div#portfolio .slide-text img {
+  width: 100%;
+  border-radius: 30px !important;
+}
+div#portfolio .slick-slide {
+  padding: 0 10px;
+}
+div#portfolio .slide-text {
+  position: relative;
+}
+
+div#portfolio .slide-text .content {
+  position: absolute;
+  bottom: 0;
+}
+
+div#portfolio .slide-text h1 {
+  color: #ed881b !important;
+}
+
+
+
+div#portfolio .arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+div#portfolio .slide-text .image{
+  position: relative;
+}
+
+div#portfolio .slide-text .image:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 42px -30px 130px 28px inset, rgba(0, 0, 0, 0.3) 42px -30px 130px 28px  inset;
+  border-radius: 30px;
+}
+#portfolio .arrow a svg {
+  background: #fff;
+  padding: 20px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  color: #ff8b48;
+  font-size: 55px !important;
+  margin-right: 5px;
+  transition: all 0.5s;
+  margin-bottom: 8px;
+  
+  margin: 10px 10px 0 0;
+}
+div#portfolio .slide-text:hover svg {
+  background: #fd853a ;
+  color: #fff;
+}
+div#portfolio .slide-text .content {
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px 40px;
+ 
+  transition: all 0.5s;
+}
+div#portfolio .slide-text:hover .content {
+  background: rgb(0 0 0 / 35%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+ 
+  transition: all 0.5s;
+}
+
+div#portfolio .slide-text .content a {
+    background: #ff8b48;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'lufga-light';
+}
+div#portfolio p {
+  font-family: 'Urbanist-SemiBold';
+  color: #fff;
+}
+div#portfolio .inner-text {
+  height: 0;
+  transition: all 0.1s;
+  visibility: hidden;
+}
+
+div#portfolio .slide-text:hover .inner-text {
+ height: 100%;
+  transition: all 0.1s;
+  visibility: unset !important;
+}
+div#portfolio .slide-text .content h3 {
+  color: #fff !important;
+}
+div#portfolio .slick-dots li button:before {
+  display: none;
+}
+
+div#portfolio  .slick-dots li {
+  background: #d0cfcf;
+  height: 20px;
+  border-radius: 20px;
+}
+
+div#portfolio .slick-dots li.slick-active {
+  width: 90px;
+  background: #ff9154;
+}
+div#portfolio .slick-dots {
+  bottom: -60px;
+}
+
+/* Newletter Section  */
+
+div#newsletter .row-bg {
+  padding: 100px 0;
+}
+div#newsletter .form-content {
+  max-width: 60%;
+  margin: 0 auto;
+}
+div#newsletter input.email {
+  width: 100%;
+  padding: 20px 20px 20px 80px;
+  border-radius: 40px;
+  border: 1px solid #d3d0d0;
+}
+
+div#newsletter .field {position: relative;}
+
+div#newsletter .field svg {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  left: 30px;
+  color: #ff9154;
+  transform: scale(2);
+}
+
+div#newsletter .field-btn {
+  position: relative;
+}
+
+div#newsletter .field-btn input {
+  position: absolute;
+  right: 8px;
+  background: #ff8b48;
+  padding: 13px 20px;
+  border-radius: 30px !important;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Urbanist-SemiBold';
+  border: unset !important;
+  letter-spacing: 1px;
+  top: -58px;
+}
+
+div#newsletter .field input::placeholder, div#newsletter .field input {
+  color: #000;
+  font-family: 'Urbanist-SemiBold';
+  font-size: 20px;
+  line-height: 28px;
+}
+
+
+
+div#newsletter h2 {
+  margin-bottom: 40px;
+}
+div#newsletter .field input:active , div#newsletter .fieldinput:focus {
+  border: 1px solid #d3d0d0 !important;
+}
+
+div#newsletter  .rating {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+div#newsletter  .rating p {color: #000;font-size: 16px !important;line-height: 24px;font-family: 'Urbanist-SemiBold';}
+
+div#newsletter  .rating p svg {
+  color: #292D32;
+  margin-right: 5px;
+  transform: scale(1.4);
+}
+
+/* Ticker Section cSS  */
+
+
+div#tivker-sec ul li {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  animation: scroll2 3s linear infinite;
+}
+
+
+div#tivker-sec ul {
+  margin: unset !important;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 10px 0;
+}
+
+
+
+
+div#tivker-sec .txt-rotate-rit {
+  
+  transform: rotate(-3deg);
+}
+@keyframes scroll2 {
+0% {
+  transform: translateX(1350px);
+}
+100% {
+  transform: translateX(calc(0px * 100));
+}
+}
+
+div#tivker-sec h5 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 300px;
+  color: #000;
+  font-size: 48px !important;
+  line-height: 56px !important;
+  font-family: 'lufga-medium' !important;
+  padding: 0 20px;
+}
+
+div#tivker-sec {
+  background: #FB6514;
+  padding: 50px 0;
+  border-radius: 30px 0 30px 0;
+  overflow: hidden;
+}
+
+
+div#tivker-sec svg {
+  color: #ff9154;
+  font-size: 55px;
+  line-height: 63px;
+}
+
+div#footer .row-bg {
+  background: #272727;
+  padding: 100px 0 30px;
+  border-radius: 20px;
+}
+
+div#footer h2 {color: #fff !important;}
+
+.ft-top {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #a4a0a0;
+}
+
+.ft-mid {
+  padding-top: 50px;
+}
+
+div#footer p {
+  color: #fff;
+  max-width: 420px;
+}
+
+div#footer h5 {
+  color: #ff8b48;
+}
+
+div#footer ul {
+  margin: unset !important;
+  padding: unset !important;
+}
+
+div#footer ul li {
+  margin: 20px 0;
+  list-style: none;
+}
+
+div#footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+div#footer ul li a svg {
+  margin-right: 20px;
+  color: #ff9154;
+  font-size: 30px;
+  line-height: 38px;
+}
+div#footer .arrow a {
+  background: #ff8b48;
+  padding: 13px 20px;
+  border-radius: 30px !important;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'lufga-light';
+  border: unset !important;
+  font-size: 20px;
+  line-height: 28px;
+}
+div#footer .arrow {
+  text-align: right;
+}
+
+div#footer .arrow svg {
+  margin-left: 10px;
+  transition: all 0.5s;
+}
+
+div#footer .arrow a:hover svg {
+  transform: rotate(-35deg) !important;
+}
+.ft-top .row {
+  display: flex;
+  align-items: center;
 }
