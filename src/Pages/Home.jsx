@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, {  useEffect, useState } from "react";
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
@@ -86,14 +87,30 @@ const Home = () => {
     ],
   };
 
+
+
+
+
+
+
+
   useEffect(() => {
+
     AOS.init({ duration: 2000 });
+
+
+
+    
+
+
+
+
   }, []);
 
   return (
     <>
-      <div id="scroll-container">
-        <div class="page__wrapper">
+      <div  className="page">
+        <div  className="page__wrapper">
           <div id="banner">
             <div className="container">
               <div className="banner-content">
