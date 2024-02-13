@@ -1024,13 +1024,15 @@ div#footer .row-bg {
 
 div#footer h2 {color: #fff !important;}
 
-.ft-top {
-  padding-bottom: 50px;
-  border-bottom: 1px solid #a4a0a0;
-}
+
 
 .ft-mid {
-  padding-top: 50px;
+  padding: 50px 0;
+  border-bottom: 1px solid #a4a0a0;
+  border-top: 1px solid #a4a0a0;
+}
+.ft-btm {
+  padding-top: 30px;
 }
 
 div#footer p {
@@ -1089,4 +1091,8 @@ div#footer .arrow a:hover svg {
 .ft-top .row {
   display: flex;
   align-items: center;
+}
+div#footer .ft-btm p {
+  text-align: center !important;
+  max-width: unset !important;
 }

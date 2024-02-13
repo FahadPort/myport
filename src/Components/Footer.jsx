@@ -64,6 +64,24 @@ const Footer = () => {
                  
                 </Row>
               </div>
+
+
+              <div className="ft-btm">
+                <Row>
+                  <Col md={12}>
+                    <div className="inner-col">
+                      <div className="text">
+                       
+                        <p>Copyright© 2024 Fahad. All Rights Reserved.</p>
+
+                      </div>
+                    </div>
+                  </Col>
+                  
+                 
+                </Row>
+              </div>
+
             </div>
           </div>
         </div>
