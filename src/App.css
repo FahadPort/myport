@@ -78,6 +78,55 @@ nav.nav-outer {
 
 /* Banner Section CSS  */
 
+/* SWitch Button  */
+
+
+.switch-btn {
+  display: flex;
+  justify-content: center;
+  max-width: 320px;
+  padding: 7px 13px;
+  border-radius: 40px !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+button.cta-switch {
+  border: unset;
+  margin: 0 10px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: transparent !important;
+}
+
+button.cta-switch a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'lufga-medium';
+  font-size: 20px;
+  line-height: 28px;
+}
+
+button.cta-switch.portfolio {
+  background: #ff8e4c !important;
+}
+.ban-text .inner-col.mid .img {
+  position: relative;
+}
+
+.ban-text .switch-btn {
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+}
+
+
 .banner-content .ban-head {
   text-align: center;
   padding: 50px 0;
@@ -193,6 +242,9 @@ h5{
 .banner-content .img img {
   display: block;
   margin: 0 auto;
+  max-width: 800px;
+  position: relative;
+  left: -10%;
 }
 
 .ban-text .row {
@@ -229,7 +281,7 @@ h5{
 
 .ban-text .img:before {
   content: "";
-  background: #feb273;
+  background: #ff883e;
   height: 500px;
   width: 500px;
   position: absolute;
