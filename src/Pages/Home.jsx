@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 import qoute from "../Assests/image/quote-up.png";
 import girl from "../Assests/image/girl.png";
+import webgif from "../Assests/image/webgif.gif"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Slider from "react-slick";
@@ -155,9 +156,9 @@ const Home = () => {
                     <Col md={6}>
                       <div className="inner-col mid">
                         <div className="img">
-                          <img src={girl} alt="" />
+                          <img src={webgif} alt="" />
 
-                          <div class="switches-container">
+                          {/* <div class="switches-container">
                             <input
                               type="radio"
                               id="switchMonthly"
@@ -179,7 +180,15 @@ const Home = () => {
                                 <div>Hire Me</div>
                               </div>
                             </div>
+                          </div> */}
+
+                          <div className="switch-btn">
+                            <button className="cta-switch portfolio"><Link to={""}>Portfolio</Link></button>
+                            <button className="cta-switch hireme"><Link to={""}>Hire Me</Link></button>
                           </div>
+
+
+
                         </div>
                       </div>
                     </Col>
